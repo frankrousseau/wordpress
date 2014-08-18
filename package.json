@@ -1,0 +1,29 @@
+{
+  "name": "couchdb",
+  "type": "docker",
+  "container": "tutum/couchdb",
+  "version": "1.0.0",
+  "displayName": "Couchdb",
+  "description": "CouchDB database.",
+  "author": "Cozy Cloud <contact@cozycloud.cc> (http://cozycloud.cc)",
+  "licenses": [
+    {
+      "type": "AGPL v3",
+      "url": "http://www.gnu.org/licenses/agpl-3.0.html"
+    }
+  ],
+  "engines": [
+    "docker >= 0.10.x"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cozy-labs/couchdb.git"
+  },
+  "bin": {
+    "cozy-calendar": "bin/cozy-calendar"
+  },
+  "scripts": {
+    "test": "cake --use-js tests",
+    "start": "sudo docker.io run -d -p 5984:5984 tutum/couchdb"
+  }
+}
