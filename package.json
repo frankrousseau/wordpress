@@ -2,7 +2,7 @@
   "name": "couchdb",
   "type": "docker",
   "container": "tutum/couchdb",
-  "defaultPort": "5984",
+  "defaultPort": 5984,
   "version": "1.0.0",
   "displayName": "Couchdb",
   "description": "CouchDB database.",
