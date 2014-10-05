@@ -1,11 +1,11 @@
 {
-  "name": "couchdb",
+  "name": "wordpress",
   "type": "docker",
-  "container": "tutum/couchdb",
-  "defaultPort": 5984,
+  "container": "tutum/wordpress",
+  "defaultPort": 80,
   "version": "1.0.0",
-  "displayName": "Couchdb",
-  "description": "CouchDB database.",
+  "displayName": "Wordpress",
+  "description": "Wordpress blog engine.",
   "author": "Cozy Cloud <contact@cozycloud.cc> (http://cozycloud.cc)",
   "licenses": [
     {
@@ -18,13 +18,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cozy-labs/couchdb.git"
-  },
-  "bin": {
-    "cozy-calendar": "bin/cozy-calendar"
+    "url": "https://github.com/cozy-labs/wordpress.git"
   },
   "scripts": {
-    "test": "cake --use-js tests",
-    "start": "sudo docker.io run -d -p 5984:5984 tutum/couchdb"
+    "start": "sudo docker.io run -d -p 80:80 tutum/wordpress"
   }
 }
